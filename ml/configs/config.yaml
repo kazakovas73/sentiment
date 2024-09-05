@@ -1,0 +1,4 @@
+model: google-bert/bert-base-cased
+datapath: data
+batch_size: 100
+cut_len: 200
