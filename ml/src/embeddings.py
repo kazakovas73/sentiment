@@ -1,11 +1,13 @@
+import os
 from pathlib import Path
 import yaml
 from transformers import AutoTokenizer, AutoModel
 import torch
 
+BASE_DIR = Path(__file__).parent.parent
 
 # load config file
-config_path = Path(__file__).parent.parent / "configs/config.yaml"
+config_path = Path(BASE_DIR) / "configs" / "config.yaml"
 with open(config_path, "r") as file:
     config = yaml.load(file, Loader=yaml.FullLoader)
 
